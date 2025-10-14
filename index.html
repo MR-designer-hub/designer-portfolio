@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MR portfolio</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+        <style>
+        /* width */
+        ::-webkit-scrollbar {
+        width: 20px;
+        }
+
+        /* Track  */
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(107, 107, 107); 
+        border-radius: 10px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgb(6, 28, 59); 
+        border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: rgb(61, 74, 94); 
+        }
+
+        .container_1 {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+        }
+
+        input, textarea, button {
+        width: 95%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+        button {
+        background: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background: #0056b3;
+        }
+
+        textarea {
+        resize: none;
+        }
+
+        .logo-img {
+        width: 100px;
+        height: auto;
+        border-radius: 8px;
+        margin: 10px;
+        }
+
+        model-viewer {
+        width: 350px;
+        height: 190px;
+           /* optional background: #111;*/
+         /* optional rounded corners border-radius: 10px;*/
+        z-index: 1;
+        }
+
+        .viewer-container {
+        display: flex;
+        justify-content: center;
+        }
+
+        .video-container {
+        display: flex;
+        justify-content: center;
+
+        width: 350px;
+        height: 190px;
+        overflow: hidden;
+        margin: 0 auto; /* centers horizontally */
+        /* display: block;*/
+        }
+
+        .cropped-video {
+        width: 150%;
+        height: 115%;
+        object-fit: cover; /* fills and crops as needed */
+        object-position: center; /* adjust crop area (e.g., top, bottom, left) */
+        }
+
+        </style>
+
+</head>
+<body>
+
+    <header>
+      <h1 class="glow"> MR portfolio </h1>
+    </header>
+
+            <main>
+                <div class="container">
+
+            <!------------------------------The 1st row-------------------------------------------->
+            <div class="item">
+                <div class="viewer-container">
+                    <model-viewer
+                    src="pictures/flange_with_a_shaft.glb"
+                    alt="Flange with a shaft" camera-controls exposure="1.2" shadow-intensity="1" auto-rotate>
+                    </model-viewer>
+                </div>
+                    <p>FLANGE</p>
+            </div>
+
+            <div class="item">
+            <div class="viewer-container">
+                <model-viewer
+                src="pictures/bolted_mast.glb"
+                alt="Bolted must" camera-controls exposure="1.2" shadow-intensity="1" auto-rotate>
+                </model-viewer>
+            </div>
+            <p>BOLTED MUST</p>
+            </div>
+
+            <div class="item">
+                <div class="viewer-container">
+                    <model-viewer
+                    src="pictures/welded_gates.glb"
+                    alt="Welded gates" camera-controls exposure="1.2" shadow-intensity="1"
+                    auto-rotate rotation-per-second="2" auto-rotate-delay="0">
+                    </model-viewer>
+                </div>
+                <p>WELDED GATES</p>
+            </div>
+            <!------------------------------The 2nd row-------------------------------------------->
+            <div class="item">
+                <div class="video-container">
+                      <video autoplay muted loop class="cropped-video">
+                        <source src="pictures/Loading_fennel.mp4" type="video/mp4">
+                      </video>
+                </div>
+                <p>LOADING FENNEL</p>
+            </div>
+
+
+            <div class="item">
+                <img src="pictures/air_separ_unit.png" alt="Air separation unit" title="Air separation unit">
+                <p>AIR SEPARATION UNIT</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/gas_tank_track.png" alt="Gas tank track, scrubbers" title="Gas tank track, scrubbers">
+                <p>GAS TRACK</p>
+            </div>
+            <!------------------------------The 3nd row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/pump_station_room.png" alt="Pumping station room" title="Pumping station room">
+                <p>PUMPING STATION</p>
+            </div>
+
+
+            <div class="item">
+                <img src="pictures/conveyor_trans.png" alt="Conveyor transport" title="Conveyor transport">
+                <p>CONVEYOR</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/fluidized_bed_furnace.png" alt="Fluidized bed furnace" title="Fluidized bed furnace">
+                <p>FLUDIZIED FURNACE</p>
+            </div>
+            <!------------------------------The 4rd row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/heating_beam_furnace.png" alt="Beam heating furnace working space" title="Beam heating furnace working space">
+                    <p>BEAM HEATING FURNACE</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/b_f_head.png" alt="Blast furnace throat" title="Blast furnace throat">
+                <p>BLAST FURNACE THROAT</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/bott_of_f.png" alt="Bottom part of the furnace. Section" title="Bottom part of the furnace. Section">
+                <p>BLAST FURNACE BOTTOM</p>
+            </div>
+            <!------------------------------The 5th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/bottom_of_f.png"alt="Bottom part of the furnace" title="Bottom part of the furnace">
+                <p>BLAST FURNACE COOLING</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/cooling_of_the_bottom_of_b_f.png" alt="Cooling of the bottom of a blast furnace" title="Cooling of the bottom of a blast furnace">
+                <p>BLAST FURNACE COPPER COOLING</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/bott_of_f_slice.png" alt="Cooling of the hearth of a blast furnace. Section" title="Cooling of the hearth of a blast furnace. Section">
+                <p>BLAST FURNACE FIRE LINING</p>
+            </div>
+            <!------------------------------The 6th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/b_f_ome.png" alt="Top of a blast-furnace" title="Top of a blast-furnace">
+                <p>BLAST FURNACE TOP</p>
+            </div>
+            
+
+            <div class="item">
+                <img src="pictures/cooling_plate_of_the_tap.png" alt="Cooling plate of the cast iron tap" title="Cooling plate of the cast iron tap">
+                <p>Cooling plate of the cast iron tap</p>
+            </div>        
+
+            <div class="item">
+                <img src="pictures/lance_pulverized_c.png" alt="Lance with pulverized coal supply. Heat simulation" title="Lance with pulverized coal supply. Heat simulation">
+                <p>Lance with pulverized coal supply. Heat simulation</p>
+            </div>
+            <!------------------------------The 7th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/lance_with_pul.png" alt="Lance with pulverized coal supply" title="Lance with pulverized coal supply">
+                <p>Lance with pulverized coal supply</p>
+            </div>
+
+
+            <div class="item">
+                <img src="pictures/distribution_of_forces.png" alt="Distribution of tensions in the plane frame" title="Distribution of tensions in the plane frame">
+                <p>Distribution of tensions in the plane frame</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/water_cooling_plate.png" alt="Water cooling plate" title="Water cooling plate"><p>Water cooling plate</p>
+            </div>
+            <!------------------------------The 8th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/shaft_plate_of_ the_b_f.png" alt="Shaft cooling plate of the blast furnace" title="Shaft cooling plate of the blast furnace">
+                <p>Shaft cooling plate of the blast furnace</p>
+            </div>
+        
+
+            <div class="item">
+                <img src="pictures/hatch_plates.png" alt="Hatch plates cooling" title="Hatch plates cooling">
+                <p>Hatch plates cooling</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/shel_ter.png" alt="Shelter model" title="Shelter model">
+                <p>Shelter model</p>
+            </div>
+            <!------------------------------The 9th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/shelter.png" alt="Shelter drawing" title="Shelter drawing">
+                <p>The shelter drawing</p>
+            </div>
+
+
+            <div class="item">
+                <img src="pictures/furnace_dome.png" alt="Blast furnace dome" title="Blast furnace dome">
+                <p>Blast furnace dome</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/a_fork.png" alt="A fork of the loader" title="A fork of the loader">
+                <p>A fork of the loader</p>
+            </div>
+            <!------------------------------The 10th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/chute.png" alt="Chute" title="Chute">
+                <p>Chute</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/standum.png" alt="Standum" title="Standum">
+                <p>Standum</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/structure_welded_profiles.png" alt="Structure made of welded profiles" title="Structure made of welded profiles">
+                <p>Structure made of welded profiles</p>
+            </div>
+
+            <!------------------------------The 11th row-------------------------------------------->
+            <div class="item">
+                <img src="pictures/b_f_oader.png" alt="Blast furnace raw material dispenser" title="Blast furnace raw material dispenser">
+                <p>Blast furnace raw material dispenser</p>
+            </div>         
+
+            <div class="item">
+                <img src="pictures/tuyere_zone_unit.png" alt="Tuyere zone unit cooling" title="Tuyere zone unit cooling">
+                <p>Tuyere zone unit cooling</p>
+            </div>
+
+            <div class="item">
+                <img src="pictures/water_separator.png" alt="Water separator" title="Water separator">
+                <p>Water separator</p>
+            </div>
+
+        </div> 
+    </main>
+    <hr>
+    <footer>
+        <div class="badges">
+            <img src="pictures/dstu.png" alt="DSTU" title="Donbas State Technical University Ukraine" class="logo-img">
+            <img src="pictures/wes.png" alt="WES" title="Word Education Services" class="logo-img">
+            <img src="pictures/coursera.png" alt="C" title="Coursera" class="logo-img">
+            <img src="pictures/SolidWorks.png" alt="SW" title="SolidWorks" class="logo-img">
+            <img src="pictures/SolidEdge.png" alt="SE" title="SolidEdge" class="logo-img">
+            <img src="pictures/AutoCad.png" alt="AC" title="AutoCad" class="logo-img">
+            <img src="pictures/ASME Y14.png" alt="ASME Y14" title="ASME Y14" class="logo-img">
+        </div>
+    </footer>
+    <hr>
+    <div class="container_1">
+    <h2 style="text-align: center; color: #333; font-family: Arial; margin: 5px;">CONTACT</h2>
+
+    <form action="https://formsubmit.co/my.roman.design@gmail.com" method="POST">
+      <input type="text" name="name" required placeholder="Your Name">
+      <input type="email" name="email" required placeholder="Your Email">
+      <textarea name="message" required placeholder="Your Message"></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html">
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
